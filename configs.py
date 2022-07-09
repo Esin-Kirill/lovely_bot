@@ -1,0 +1,10 @@
+TOKEN = '<hidden>'
+ADMIN_CHAT_ID = '<hidden>'
+USERS = ['<hidden>']
+PIXABY_TOKEN = '<hidden>'
+USER_AGENT = {'User-Agent':'<hidden>'}
+MSG_WELCOME = """<hidden>"""
+MSG_HELP = """<hidden>"""
+MORNING_MSGS = ["<hidden>"]
+MORNING_NAMES = ['<hidden>']
+MORNING_SMLS = ['<hidden>']
