@@ -158,9 +158,11 @@ def some(message):
 
 @bot.message_handler(commands=['start'])
 def bot_start(message):
+    global TO_SEND
+    
     if not TO_SEND:
         TO_SEND = True
-        schedule.every().day.at("10:00").do(bot_send_morning_msg, message.chat.id)
+        schedule.every().day.at("5:00").do(bot_send_morning_msg, message.chat.id)
     
     kb = replyKB(row_width=2, resize_keyboard=True)
     btn1 = replyBTN('Погода')
