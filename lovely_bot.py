@@ -14,7 +14,7 @@ import threading
 
 
 # GLOBALS
-TO_SEND = False
+TO_SEND = {}
 URL_WEATHER = 'https://www.gismeteo.ru'
 URL_MUSIC = 'https://music.yandex.ru/genres'
 
@@ -160,8 +160,8 @@ def some(message):
 def bot_start(message):
     global TO_SEND
     
-    if not TO_SEND:
-        TO_SEND = True
+    if TO_SEND.get(message.chat.id) != True:
+        TO_SEND[message.chat.id] = True
         schedule.every().day.at("05:00").do(bot_send_morning_msg, message.chat.id)
     
     kb = replyKB(row_width=2, resize_keyboard=True)
