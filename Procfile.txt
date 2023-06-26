@@ -1,1 +1,1 @@
-worker: python KamillaBot.py
+worker: python lovely_bot.py
